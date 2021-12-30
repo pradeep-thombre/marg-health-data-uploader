@@ -1,0 +1,33 @@
+
+
+
+<!-- header data  -->
+<main class="container">
+    
+    <!-- upload a new csv file -->
+    <div class="row justify-content-center">
+        <div class="col col-md-8 col-lg-8 col-xl-6">
+            <h5 class="display-5 text-center mt-5 mb-2">Upload csv file</h5>
+            <form action="/api/uploadCSV" enctype="multipart/form-data" method="POST">
+                <label for="file-upload" class="form-label mb-2"></label>
+                <input type="file" name="file" id="file-upload" class="form-control mb-4 searchInput" accept=".csv" required >
+                <div class="text-center mb-4">
+                    <button type="submit" class=" btn btn-primary" onclick="upload()">
+                        Submit
+                    </button>
+                </div>
+            </form>
+
+        </div>
+        <hr>
+        <Button style="width: auto;"><a href="/view-file">Click here to View Uploaded Files</a></Button>
+        <img id="anim" src="/images/loading36.gif" alt="">
+    </div>
+
+
+
+
+<!-- scripts  -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="/js/homepage.js"></script>
+</main>

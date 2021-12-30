@@ -1,0 +1,104 @@
+.hover-text:hover{
+    border:1px solid ;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+}
+
+body{
+    background-image: linear-gradient(rgb(247, 183, 183),white,rgb(247, 183, 183));
+}
+
+.bg{
+    background-image: linear-gradient(to left,rgb(247, 183, 183),rgb(88, 191, 255));
+    border-bottom: 1px solid black;
+}
+.searchInput{
+    background-color: transparent;
+    border: 1px solid rgb(2, 2, 2);
+}
+li{
+    vertical-align: middle;
+}
+ul{
+    width: auto;
+}
+
+a,button{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(225, 193, 255);
+}
+
+td,th{
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+.tablediv{
+    width: 80vw;
+    margin: auto;
+}
+
+table.dataTable tbody tr {
+    background-color: transparent;
+}
+
+#anim{
+    z-index: 2;
+    position:fixed;
+    width: 30%;    
+    min-width: 50px;
+    left: 35%;
+    top: 20%;
+    padding: 20px 0px;
+}
+
+
+/* ---------------------------------edit box ------------------------------------- */
+#edit-box{
+    background-image: linear-gradient(aqua,rgb(255, 255, 255),rgb(113, 236, 252));
+    border: 1px solid black;
+    border-radius: 20px;
+    z-index: 2;
+    position:fixed;
+    width: 30%;    
+    min-width: 350px;
+    left: 35%;
+    top: 5%;
+    padding: 20px 0px;
+}
+
+/* heading in edit box  */
+#edit-box h3{
+    width: 100%;
+    text-align: center;
+}
+
+/* user image in edit box  */
+#edit-box img{
+    width: 100%;
+    text-align: center;
+    padding: 5px 30%;
+}
+
+/* input fields in edit box  */
+#edit-box input{
+    width: 70%;
+    margin: 5px 15%;
+    border-radius: 10px;
+    padding: 2px 10px;
+    font-size: 15px;
+}
+
+/* update button in edit box  */
+#edit-box button{
+    width: 70%;
+    margin: 5px 15%;
+    border-radius: 10px;
+    padding: 2px 10px;
+}

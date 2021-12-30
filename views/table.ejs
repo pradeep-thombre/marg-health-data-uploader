@@ -1,0 +1,67 @@
+<!-- data table style  -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="/css/layout.css">
+
+<!-- filename  -->
+<h4 class="display-5 text-center mb-2">All Medicines</h4>
+
+<!-- table  -->
+<div class="tablediv">
+    <table id="data-table">
+
+        <!-- table headers  -->
+        <thead>
+            <tr>
+                <th>c_name</th>
+                <th>c_batch_no</th>
+                <th>d_expiry_date</th>
+                <th>n_balance_qty</th>
+                <th>c_packaging</th>
+                <th>c_unique_code</th>
+                <th>c_schemes</th>
+                <th>n_mrp</th>
+                <th>c_manufacturer</th>
+                <th>hsn_code</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <!-- table body  -->
+        <tbody id="table-body">
+
+            
+        </tbody>
+    </table>
+</div>
+<!-- scripts -->
+
+<!-- edit box initially==> hidden, visible on clicked on edit button  -->
+<div id="edit-box">
+    <h3>Edit Medicine Details</h3>
+
+    <!-- user profile image  -->
+    <img src="/images/MedicinePills.png">
+
+    <!-- // c_name c_batch_no d_expiry_date n_balance_qty c_packaging c_unique_code c_schemes n_mrp	c_manufacturer	hsn_code	Action -->
+    <!-- input texts to modify the data  -->
+    <form action="/api/edit" method="post">
+        <input id="edit-c_name" name="c_name" type="text" placeholder="Enter Updated c_name">
+        <input id="edit-c_batch_no" name="c_batch_no" type="text" placeholder="Enter Updated c_batch_no">
+        <input id="edit-d_expiry_date" name="d_expiry_date" type="text" placeholder="Enter Updated d_expiry_date">
+        <input id="edit-n_balance_qty" name="n_balance_qty" type="text" placeholder="Enter Updated n_balance_qty">
+        <input id="edit-c_packaging" name="c_packaging" type="text" placeholder="Enter Updated c_packaging">
+        <input id="edit-c_unique_code" name="c_unique_code" type="text" placeholder="Enter Updated c_unique_code">
+        <input id="edit-c_schemes" name="c_schemes" type="text" placeholder="Enter Updated c_schemes">
+        <input id="edit-n_mrp" name="n_mrp" type="text" placeholder="Enter Updated n_mrp">
+        <input id="edit-c_manufacturer" name="c_manufacturer" type="text" placeholder="Enter Updated c_manufacturer">
+        <input id="edit-hsn_code" name="hsn_code" type="text" placeholder="Enter Updated hsn_code">
+        <input id="edit-id" type="hidden" name="_id">
+        <!-- update button for update modified data  -->
+        <button id="update-button" value="update" type="submit">Update Profile</button>
+    </form>
+</div>
+
+<!-- and jquery and data table library -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+<script src="/js/viewFile.js"></script>
