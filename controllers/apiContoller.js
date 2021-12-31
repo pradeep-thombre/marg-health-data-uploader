@@ -69,7 +69,7 @@ module.exports.uploadFile =async (req, res) => {
             // console.log(item);
         }
         console.log("data uploaded successfully");
-        return res.redirect('back');
+        return res.redirect("/view-file");
     } catch (err) {
         console.log("err",err);
     }
