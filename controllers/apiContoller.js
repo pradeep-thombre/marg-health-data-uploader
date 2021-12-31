@@ -2,13 +2,12 @@
 const Medicine = require("../models/medicine");
 const csv = require("csvtojson");
 const upload = require("../config/multer");
-const { render } = require("express/lib/response");
 
 // rendering home page 
 module.exports.edit =async (req, res) => {
     try{
         data=req.body;
-        medicine=await Medicine.findByIdAndUpdate(data._id,data);
+        await Medicine.findByIdAndUpdate(data._id,data);
         return res.redirect('back');
     }catch(err){
         console.log(err);
@@ -51,7 +50,6 @@ module.exports.delete = async (req, res) => {
 // upload file action 
 module.exports.uploadFile =async (req, res) => {
     try {
-        
         upload.single("file");
         // converting csv data into array of json object 
         const dataArr = await csv().fromString(req.file.buffer.toString());
@@ -62,10 +60,9 @@ module.exports.uploadFile =async (req, res) => {
         }catch(err){
             console.log(err);
         }
-        console.log(dataArr.length);
+        
         for(let item of dataArr){
             await Medicine.create(item);
-            
             // console.log(item);
         }
         console.log("data uploaded successfully");
